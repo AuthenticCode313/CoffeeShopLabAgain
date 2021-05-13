@@ -1,0 +1,26 @@
+﻿@model List<Client>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+
+<h2>Client Database</h2>
+
+ @*@foreach (Client clients in Model)
+}
+    <div> @clients.ClientId @clients.FirstName @clients.LastName @clients.DrinkType @clients.Tele </div>
+}*@
+
+<h4>Add New Clients</h4>
+
+<form method="post" action="/Result/SaveClient">
+    First Name: <input type="text" name="FirstName" /><br />
+    Drink Type: <input type="text" name="DrinkType" /><br />
+    Telephone: <input type="tel" name="Phone" /><br />
+    <input type="submit" />
+</form>
+
